@@ -32,7 +32,9 @@ const RegularButton: FunctionComponent<ButtonProps> = (props) => {
     <ButtonView 
       onPress={props.onPress} 
       style={props.btnStyles}>
-      <RegularText>Button</RegularText>
+      <RegularText
+        textStyles={props.textStyles}
+      >{props.children}</RegularText>
     </ButtonView>
   );
 };

@@ -10,6 +10,7 @@ import BigText from "../components/Texts/BigText";
 import SmallText from "../components/Texts/SmallText";
 import RegularButton from '../components/Buttons/RegularButton';
 
+//styled components
 const WelcomeContainer = styled(Container)`
   background-color: ${colors.secondary};
   justify-content: space-between;
@@ -49,17 +50,16 @@ const Welcome: FunctionComponent = () => {
         </TopSection>
         <BottomSection>
           <BigText textStyles={{ width: "70%", marginBottom: 25 }}>
-            Best way to track your money!
+            Best way to track your money!!
           </BigText>
           <SmallText textStyles={{ width: "70%", marginBottom: 25 }}>
-            Best payment method, connects your money to friends and family
+            Best payment method, connects your money to friends and family!!
           </SmallText>
           <RegularButton onPress={() => {}}>
             Get Started
           </RegularButton>
         </BottomSection>
       </WelcomeContainer>
-    
     </>
   )
 };
