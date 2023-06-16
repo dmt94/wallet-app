@@ -7,6 +7,7 @@ import { colors } from "../components/colors";
 import { Container } from "../components/shared";
 import CardSection from "../components/Cards/CardSection";
 import TransactionSection from "../components/Transactions/TransactionSection";
+import SendMoneySection from "../components/SendMoney/SendMoneySection";
 
 const HomeContainer = styled(Container)`
   background-color: ${colors.graylight};
