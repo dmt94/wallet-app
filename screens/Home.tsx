@@ -15,9 +15,15 @@ const HomeContainer = styled(Container)`
   flex: 1;
 `;
 
+
 // card logos
 import logo1 from "./../assets/cards/visa_white.png";
 import logo2 from "./../assets/cards/mc.png";
+
+// send money images
+import portrait1 from "./../assets/portraits/1.jpg";
+import portrait2 from "./../assets/portraits/2.png";
+import portrait3 from "./../assets/portraits/3.jpg";
 
 const Home: FunctionComponent = () => {
   const cardsData = [
@@ -80,11 +86,36 @@ const Home: FunctionComponent = () => {
     },
   ];
 
+  const sendMoneyData = [
+    {
+      id: 1,
+      amount: "2450.56",
+      name: "Hunkle G.",
+      background: colors.tertiary,
+      img: portrait1,
+    },
+    {
+      id: 2,
+      amount: "13450.56",
+      name: "Alexander J.H.",
+      background: colors.primary,
+      img: portrait2,
+    },
+    {
+      id: 3,
+      amount: "8000.56",
+      name: "Taylor S.",
+      background: colors.accent,
+      img: portrait3,
+    },
+  ];
+
   return (
     <HomeContainer>
       <StatusBar style="dark" />
       <CardSection data={cardsData} />
       <TransactionSection data={transactionData}/>
+      <SendMoneySection data={sendMoneyData} />
     </HomeContainer>
   );
 };

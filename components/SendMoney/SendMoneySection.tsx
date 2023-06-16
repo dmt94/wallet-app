@@ -6,6 +6,7 @@ import BottomSheet from "reanimated-bottom-sheet";
 import { colors } from "../colors";
 import RegularText from "../Texts/RegularText";
 import SmallText from "../Texts/SmallText";
+import SendMoneyItem from "./SendMoneyItem";
 
 const SendMoneySectionBackground = styled.View`
   width: 100%;
@@ -58,6 +59,17 @@ const SendMoneySection: FunctionComponent<SendMoneySectionProps> = (props) => {
             </SmallText>
           </TextButton>
         </SendMoneyRow>
+        <SendMoneyList
+          data={props.data}
+          contentContainerStyle={{
+            alignItems: "flex-start",            
+          }}
+          horizontal={false}
+          showsVerticalScrollIndicator={false}
+          numColumns={3}
+          keyExtractor={({ id }: any) => id.toString()}
+          renderItem={({ item }: any) => <SendMoneyItem {...item} />}
+         />
       </SendMoneySectionBackground>
      );
   }
